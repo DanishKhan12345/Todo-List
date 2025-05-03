@@ -1,0 +1,5 @@
+<div class="d-flex align-items-center p-3 border rounded shadow bg-light">
+    <h5 class="me-3 fw-bold text-primary">{{ todo.title }}</h5>
+    <p class="flex-grow-1 text-wrap text-secondary mb-0">{{ todo.desc }}</p>
+    <button class="btn btn-danger ms-3 px-4 py-2 rounded-pill" (click)="deleteTodo(todo)">Delete</button>
+</div>

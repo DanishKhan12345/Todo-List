@@ -1,0 +1,14 @@
+<h4 class="text-center">Add a Todo</h4>
+<form (ngSubmit)="addTodo()" class="w-50 mx-auto mt-4 p-4 border rounded shadow bg-light">
+    <div class="form-group">
+      <label for="title">Todo Title</label>
+      <input type="text" [(ngModel)] = "title" name="title" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Enter Title">
+    </div>
+    <div class="form-group">
+      <label for="desc">Todo Description</label>
+      <input type="text" [(ngModel)] = "desc" name="desc" class="form-control" id="desc" placeholder="Enter Description">
+    </div>
+    <div class="d-flex justify-content-center mt-3">
+        <button type="submit" class="btn btn-primary btn-lg rounded-pill mt-3 my-3">Add ToDo</button>
+    </div>
+  </form>

@@ -1,2 +1,9 @@
-<p>todos works!</p>
-<p>This is my first Component</p>
+<app-add-todo (TodoAdd)="TodoAdd($event)"></app-add-todo>
+<div class = "text-center my-3"*ngIf="this.todos.length === 0; else elseBlock">You have completed all Tasks. Add some new Todos to Display</div>
+<ng-template #elseBlock>
+  <h4 class="text-center">My Todos</h4>
+  <div *ngFor="let todo of todos">
+    <app-todos-item [todo]="todo" (todoDelete)="deleteTodo($event)"></app-todos-item>
+  </div>
+</ng-template>
+
